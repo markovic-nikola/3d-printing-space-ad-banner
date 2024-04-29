@@ -1,0 +1,6 @@
+tagURLusa:
+  type: string
+  default: "https://3dprintingusa.com/"
+tagURLca:
+  type: string
+  default: "https://3dprintingcanada.com/"
