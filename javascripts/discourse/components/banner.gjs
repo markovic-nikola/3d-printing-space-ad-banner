@@ -2,7 +2,7 @@ import Component from "@ember/component";
 import { on } from "@ember/modifier";
 import { action } from "@ember/object";
 import didInsert from "@ember/render-modifiers/modifiers/did-insert";
-import willDestroy from "@ember/render-modifiers/modifiers/will-destroy";
+// import willDestroy from "@ember/render-modifiers/modifiers/will-destroy";
 import { service } from "@ember/service";
 import i18n from "discourse-common/helpers/i18n";
 // import discourseComputed from "discourse-common/utils/decorators";
