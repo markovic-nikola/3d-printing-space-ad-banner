@@ -14,7 +14,16 @@ export default class Banner extends Component {
   @action
   async setup() {}
 
-  get logoLocation() {
+  get logoLocationDesktop() {
+    const logo =
+      this.currentUser.geo_location.country_code === "CA"
+        ? settings.theme_uploads.ca_desktop
+        : settings.theme_uploads.us_desktop;
+
+    return logo;
+  }
+
+  get logoLocationMobile() {
     const logo =
       this.currentUser.geo_location.country_code === "CA"
         ? settings.theme_uploads.ca_mobile
@@ -49,7 +58,8 @@ export default class Banner extends Component {
       {{didInsert this.setup}}
       {{on "click" this.gotoURL}}
     >
-		<img src={{this.logoLocation}} alt="" class="sp-pos" id="sp-logo" />
+		<img src={{this.logoLocationDesktop}} alt="" class="sp-pos" id="sp-logo-desktop" />
+		<img src={{this.logoLocationMobile}} alt="" class="sp-pos" id="sp-logo-mobile" />
 	</div>
   </template>
 }
