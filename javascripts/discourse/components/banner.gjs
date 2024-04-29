@@ -17,9 +17,9 @@ export default class Banner extends Component {
   get logoLocation() {
     const logo =
       this.currentUser.geo_location.country_code === "CA"
-        ? [settings.theme_uploads.ca_mobile, settings.theme_uploads.ca_desktop]
-        : [settings.theme_uploads.us_mobile, settings.theme_uploads.us_desktop];
-console.log('xyz', logo);
+        ? settings.theme_uploads.ca_mobile
+        : settings.theme_uploads.us_mobile;
+
     return logo;
   }
 
@@ -49,7 +49,7 @@ console.log('xyz', logo);
       {{didInsert this.setup}}
       {{on "click" this.gotoURL}}
     >
-		<img src="{{this.logoLocation[0]}}" id="space-banner-img" alt="{{this.alt}}" />
+		<img src={{this.logoLocation}} alt="" class="sp-pos" id="sp-logo" />
 	</div>
   </template>
 }
