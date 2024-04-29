@@ -19,7 +19,7 @@ export default class Banner extends Component {
       this.currentUser.geo_location.country_code === "CA"
         ? [settings.theme_uploads.ca_mobile, settings.theme_uploads.ca_desktop]
         : [settings.theme_uploads.us_mobile, settings.theme_uploads.us_desktop];
-
+console.log('xyz', logo);
     return logo;
   }
 
@@ -49,9 +49,7 @@ export default class Banner extends Component {
       {{didInsert this.setup}}
       {{on "click" this.gotoURL}}
     >
-		<picture>
-			<img src={{this.logoLocation[0]}} id="space-banner-img" alt={{this.alt}} />
-		</picture>
+		<img src={{this.logoLocation[0]}} id="space-banner-img" alt={{this.alt}} />
 	</div>
   </template>
 }
