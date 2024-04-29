@@ -50,7 +50,7 @@ export default class Banner extends Component {
       {{on "click" this.gotoURL}}
     >
 		<picture>
-			<img src={{this.logoLocation[0]}} alt={{this.alt}} />
+			<img src={{this.logoLocation[0]}} id="space-banner-img" alt={{this.alt}} />
 		</picture>
 	</div>
   </template>
