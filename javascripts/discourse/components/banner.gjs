@@ -49,7 +49,7 @@ console.log('xyz', logo);
       {{didInsert this.setup}}
       {{on "click" this.gotoURL}}
     >
-		<img src={{this.logoLocation[0]}} id="space-banner-img" alt={{this.alt}} />
+		<img src="{{this.logoLocation[0]}}" id="space-banner-img" alt="{{this.alt}}" />
 	</div>
   </template>
 }
